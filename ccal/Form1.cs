@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
@@ -40,7 +41,7 @@ namespace ExcelRowSplitter
                     }
                     else
                     {
-                        MessageBox.Show("No folder selected. Operation cancelled.");
+                        MessageBox.Show("폴더가 선택되지 않았습니다. 작업이 취소되었습니다.");
                     }
                 }
             }
@@ -56,7 +57,7 @@ namespace ExcelRowSplitter
 
                     if (workbook.NumberOfSheets < 4)
                     {
-                        MessageBox.Show("The Excel file does not contain at least 4 sheets.");
+                        MessageBox.Show("엑셀 파일에 시트가 4개 이상 존재하지 않습니다.");
                         return;
                     }
 
@@ -86,7 +87,7 @@ namespace ExcelRowSplitter
                             rowData[col] = currentRow.GetCell(col)?.ToString();
                         }
 
-                        string fileName = $"{rowData[0]}~{rowData[1]}_{rowData[2]}_{rowData[3]}_{rowData[4]}_{rowData[5]}.xlsx";
+                        string fileName = CleanFileName($"{rowData[0]}~{rowData[1]}_{rowData[5]}_{rowData[3]}_{rowData[2]}.xlsx");
                         SaveRowToNewExcelFile(rowData, fileName, sheet1, sheet2, sheet3, sheet4);
 
                         progressBar.Value++;
@@ -97,8 +98,14 @@ namespace ExcelRowSplitter
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}");
+                MessageBox.Show($"오류가 발생했습니다: {ex.Message}");
             }
+        }
+
+        private string CleanFileName(string fileName)
+        {
+            // 파일명으로 사용할 수 없는 특수문자를 제거합니다.
+            return Regex.Replace(fileName, @"[\\/:*?""<>|]", string.Empty);
         }
 
         private void SaveRowToNewExcelFile(string[] rowData, string fileName, ISheet sheet1, ISheet sheet2, ISheet sheet3, ISheet sheet4)
