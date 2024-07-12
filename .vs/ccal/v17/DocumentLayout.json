@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Development\\settlement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD5A64A-4ACC-4742-9FF2-AFB45505A703}|ccal\\ccal.csproj|c:\\development\\settlement\\ccal\\settlement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD5A64A-4ACC-4742-9FF2-AFB45505A703}|ccal\\ccal.csproj|solutionrelative:ccal\\settlement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD5A64A-4ACC-4742-9FF2-AFB45505A703}|ccal\\ccal.csproj|c:\\development\\settlement\\ccal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD5A64A-4ACC-4742-9FF2-AFB45505A703}|ccal\\ccal.csproj|solutionrelative:ccal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD5A64A-4ACC-4742-9FF2-AFB45505A703}|ccal\\ccal.csproj|c:\\development\\settlement\\ccal\\settlement.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD5A64A-4ACC-4742-9FF2-AFB45505A703}|ccal\\ccal.csproj|solutionrelative:ccal\\settlement.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Development\\settlement\\ccal\\Program.cs",
+              "RelativeDocumentMoniker": "ccal\\Program.cs",
+              "ToolTip": "C:\\Development\\settlement\\ccal\\Program.cs",
+              "RelativeToolTip": "ccal\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T04:04:36.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Settlement.cs",
+              "DocumentMoniker": "C:\\Development\\settlement\\ccal\\Settlement.cs",
+              "RelativeDocumentMoniker": "ccal\\Settlement.cs",
+              "ToolTip": "C:\\Development\\settlement\\ccal\\Settlement.cs",
+              "RelativeToolTip": "ccal\\Settlement.cs",
+              "ViewState": "AQIAABoBAAAAAAAAAAArwEUBAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T04:04:29.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Settlement.Designer.cs",
+              "DocumentMoniker": "C:\\Development\\settlement\\ccal\\Settlement.Designer.cs",
+              "RelativeDocumentMoniker": "ccal\\Settlement.Designer.cs",
+              "ToolTip": "C:\\Development\\settlement\\ccal\\Settlement.Designer.cs",
+              "RelativeToolTip": "ccal\\Settlement.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T04:04:21.27Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
