@@ -106,9 +106,9 @@ namespace ExcelRowSplitter
         /// <returns>유효성 여부</returns>
         private bool ValidateWorkbook(IWorkbook workbook)
         {
-            if (workbook.NumberOfSheets < 5)
+            if (workbook.NumberOfSheets < 6)
             {
-                MessageBox.Show("엑셀 파일에 시트가 5개 이상 존재하지 않습니다.");
+                MessageBox.Show("엑셀 파일에 시트가 6개 이상 존재하지 않습니다.");
                 return false;
             }
             return true;
@@ -127,7 +127,8 @@ namespace ExcelRowSplitter
                 workbook.GetSheetAt(1),
                 workbook.GetSheetAt(2),
                 workbook.GetSheetAt(3),
-                workbook.GetSheetAt(4)
+                workbook.GetSheetAt(4),
+                workbook.GetSheetAt(5)
             };
         }
 
@@ -286,7 +287,8 @@ namespace ExcelRowSplitter
                 workbook.CreateSheet("Sheet2"),
                 workbook.CreateSheet("Sheet3"),
                 workbook.CreateSheet("Sheet4"),
-                workbook.CreateSheet("Sheet5")
+                workbook.CreateSheet("Sheet5"),
+                workbook.CreateSheet("Sheet6")
             };
         }
 
@@ -323,7 +325,8 @@ namespace ExcelRowSplitter
             CopyAndFilterSheet(sourceSheets[1], targetSheets[1], filterValue, 2);
             CopyAndFilterSheet(sourceSheets[2], targetSheets[2], filterValue, 3);
             CopyAndFilterSheet(sourceSheets[3], targetSheets[3], filterValue, 3);
-            CopyAndFilterSheet(sourceSheets[4], targetSheets[4], filterValue, 0);
+            CopyAndFilterSheet(sourceSheets[4], targetSheets[4], filterValue, 3);
+            CopyAndFilterSheet(sourceSheets[4], targetSheets[5], filterValue, 0);
         }
 
         /// <summary>
@@ -403,7 +406,7 @@ namespace ExcelRowSplitter
         /// <param name="sheets">처리할 시트 배열</param>
         private void RemoveSpecificColumns(ISheet[] sheets)
         {
-            RemoveColumns(sheets[0], new[] { 6, 7, 8, 10, 11, 13, 14, 23, 24, 26, 27 });
+            RemoveColumns(sheets[0], new[] { 6, 7, 8, 10, 11 });
             RemoveColumns(sheets[1], new[] { 9, 10, 12, 13 });
         }
 
@@ -436,8 +439,9 @@ namespace ExcelRowSplitter
             ProcessRange(sheets[1], "I2", "AD");
             ProcessRange(sheets[2], "E2", "N");
             ProcessRange(sheets[3], "G2", "G");
-            ProcessRange(sheets[4], "G2", "O");
-            ProcessRange(sheets[4], "T2", "Z");
+            ProcessRange(sheets[4], "G2", "G");
+            ProcessRange(sheets[5], "G2", "O");
+            ProcessRange(sheets[5], "T2", "Z");
         }
 
         /// <summary>
