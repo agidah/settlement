@@ -158,8 +158,8 @@ namespace ExcelRowSplitter
         private string[] ExtractHeaderRow(ISheet sheet)
         {
             IRow header = sheet.GetRow(0);
-            string[] headerData = new string[32];
-            for (int col = 0; col < 32; col++)
+            string[] headerData = new string[34];
+            for (int col = 0; col < 34; col++)
             {
                 headerData[col] = header.GetCell(col)?.ToString();
             }
@@ -208,8 +208,8 @@ namespace ExcelRowSplitter
         /// <returns>추출된 행 데이터 배열</returns>
         private string[] ExtractRowData(IRow row)
         {
-            string[] rowData = new string[32];
-            for (int col = 0; col < 32; col++)
+            string[] rowData = new string[34];
+            for (int col = 0; col < 34; col++)
             {
                 rowData[col] = row.GetCell(col)?.ToString();
             }
@@ -326,7 +326,7 @@ namespace ExcelRowSplitter
             CopyAndFilterSheet(sourceSheets[2], targetSheets[2], filterValue, 3);
             CopyAndFilterSheet(sourceSheets[3], targetSheets[3], filterValue, 3);
             CopyAndFilterSheet(sourceSheets[4], targetSheets[4], filterValue, 3);
-            CopyAndFilterSheet(sourceSheets[4], targetSheets[5], filterValue, 0);
+            CopyAndFilterSheet(sourceSheets[5], targetSheets[5], filterValue, 0);
         }
 
         /// <summary>
@@ -406,7 +406,7 @@ namespace ExcelRowSplitter
         /// <param name="sheets">처리할 시트 배열</param>
         private void RemoveSpecificColumns(ISheet[] sheets)
         {
-            RemoveColumns(sheets[0], new[] { 6, 7, 8, 10, 11 });
+            RemoveColumns(sheets[0], new[] { 6, 7, 8, 9, 11, 12, 14, 15, 17, 18, 27, 28, 30, 31 });
             RemoveColumns(sheets[1], new[] { 9, 10, 12, 13 });
         }
 
@@ -435,7 +435,7 @@ namespace ExcelRowSplitter
         /// <param name="sheets">처리할 시트 배열</param>
         private void ProcessRanges(ISheet[] sheets)
         {
-            ProcessRange(sheets[0], "G2", "AD");
+            ProcessRange(sheets[0], "G2", "AH");
             ProcessRange(sheets[1], "I2", "AD");
             ProcessRange(sheets[2], "E2", "N");
             ProcessRange(sheets[3], "G2", "G");
