@@ -188,7 +188,7 @@ namespace ExcelRowSplitter
                 AddHeaderAndDataToSheet1(newSheets[0], rowData);
                 CopyAndFilterOtherSheets(sourceSheets, newSheets, sheet1C2Value);
 
-                RemoveSpecificColumns(newSheets);
+                //RemoveSpecificColumns(newSheets);
                 ProcessRanges(newSheets);
                 RemoveEmptyRowsFromAllSheets(newSheets);
 
@@ -271,10 +271,12 @@ namespace ExcelRowSplitter
             }
         }
 
+        
+       /*
         private void RemoveSpecificColumns(ISheet[] sheets)
         {
-            int[] columnsToRemoveSheet1 = { 6, 7, 8, 9, 11, 12, 14, 15, 17, 18, 27, 28, 30, 31 };
-            int[] columnsToRemoveSheet2 = { 9, 10, 12, 13 };
+            int[] columnsToRemoveSheet1 = {  };
+            int[] columnsToRemoveSheet2 = {  };
 
             RemoveColumns(sheets[0], columnsToRemoveSheet1);
             RemoveColumns(sheets[1], columnsToRemoveSheet2);
@@ -293,6 +295,7 @@ namespace ExcelRowSplitter
                 }
             }
         }
+        */
 
         private void ProcessRanges(ISheet[] sheets)
         {
