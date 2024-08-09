@@ -301,7 +301,7 @@ namespace ExcelRowSplitter
         {
             ProcessRange(sheets[0], "G2", "AH");
             ProcessRange(sheets[1], "I2", "AD");
-            ProcessRange(sheets[2], "E2", "N");
+            ProcessRange(sheets[2], "E2", "O");
             ProcessRange(sheets[3], "G2", "G");
             ProcessRange(sheets[4], "G2", "G");
             ProcessRange(sheets[5], "G2", "O");
